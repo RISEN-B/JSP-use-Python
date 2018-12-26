@@ -9,11 +9,11 @@ class Exec
     private ArrayList list = new ArrayList();
     public void usePython() throws Exception
     {
-    String a = "";
-		String[] arg = new String[]{"python3", request.getRealPath("/") + "test.py"};
-		Process pr = Runtime.getRuntime().exec(arg);
+    	String a = "";
+	String[] arg = new String[]{"python3", request.getRealPath("/") + "test.py"};
+	Process pr = Runtime.getRuntime().exec(arg);
 
-		BufferedReader in = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+	BufferedReader in = new BufferedReader(new InputStreamReader(pr.getInputStream()));
         String line;
 
         while ((line = in.readLine()) != null) {
